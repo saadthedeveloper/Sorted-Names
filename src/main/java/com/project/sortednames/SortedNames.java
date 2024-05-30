@@ -19,9 +19,9 @@ public class SortedNames {
         boolean validationValue1;
         boolean validationValue2;
         boolean validationValue3;
-        String first;
-        String second;
-        String third;
+        String first = "space";
+        String second = "space";
+        String third = "space";
         
                 
         System.out.println("Enter a name: ");
@@ -58,9 +58,9 @@ public class SortedNames {
             validationValue3 = name3.equalsIgnoreCase(name1);
         }
         
-       if((name1).compareToIgnoreCase(name2)>0 && (name1).compareToIgnoreCase(name3) > 0)
+       if((name1).compareToIgnoreCase(name2)<0 && (name1).compareToIgnoreCase(name3) < 0)
        {
-           if(name2.compareToIgnoreCase(name3) > 0)
+           if(name2.compareToIgnoreCase(name3) < 0)
            {
                first = name1;
                second = name2;
@@ -70,6 +70,42 @@ public class SortedNames {
            {
                 first = name1;
                second = name3;
+               third = name2;
+           }
+       }
+        
+       
+       
+       if((name2).compareToIgnoreCase(name1) < 0 && (name2).compareToIgnoreCase(name3) < 0)       {
+           if(name1.compareToIgnoreCase(name3) < 0)
+           {
+               first = name2;
+               second = name1;
+               third = name3;
+           }
+           else
+           {
+                first = name2;
+               second = name3;
+               third = name1;
+           }
+       }
+        
+       
+       
+       
+       if((name3).compareToIgnoreCase(name1) < 0 && (name3).compareToIgnoreCase(name2) < 0)
+       {
+           if(name2.compareToIgnoreCase(name3) < 0)
+           {
+               first = name3;
+               second = name2;
+               third = name1;
+           }
+           else
+           {
+                first = name3;
+               second = name1;
                third = name2;
            }
        }
