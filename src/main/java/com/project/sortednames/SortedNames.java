@@ -4,15 +4,20 @@
 
 package com.project.sortednames;
 import java.util.Scanner;     
-/**
- *
- * @author MKAY 
+/*
+This is a program that asks the user to enter three names, and then displays the names sorted 
+in ascending order. For example, if the user entered “Charlie”, “Leslie”, and “Andy”, the 
+program would display:
+ 1. Andy
+ 2. Charlie
+ 3. Leslie
  */
 public class SortedNames {
 
     public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
         
+        //Variable declaration region below
         String name1;
         String name2;
         String name3;
@@ -22,7 +27,7 @@ public class SortedNames {
         String first = "space";
         String second = "space";
         String third = "space";
-        
+        //Variable declaration region above
                 
         System.out.println("Enter a name: ");
         name1 = keyboard.nextLine();
@@ -38,7 +43,7 @@ public class SortedNames {
         validationValue2 = name2.equalsIgnoreCase(name3);
         validationValue3 = name3.equalsIgnoreCase(name1);
         
-      
+       // Validation; The user should'nt enter the same name more than once
         while(validationValue1 == true || validationValue2 == true || validationValue3 == true)
         {
             
@@ -57,6 +62,10 @@ public class SortedNames {
             validationValue2 = name2.equalsIgnoreCase(name3);
             validationValue3 = name3.equalsIgnoreCase(name1);
         }
+
+
+
+       // Sorting names using decision structures below 
         
        if((name1).compareToIgnoreCase(name2)<0 && (name1).compareToIgnoreCase(name3) < 0)
        {
